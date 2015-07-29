@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-script_name=`basename ${0}`
+script_name="SetUpHCPPipeline_PostFix.sh"
 echo "${script_name}: This script must be SOURCED to correctly setup the environment prior to running"
 echo "${script_name}: any of the other HCP scripts contained here."
 
@@ -36,7 +36,7 @@ then
 
 	echo ""
 	echo "${script_name}: Setting up Workbench (a.k.a. CARET7)"
-	export CARET7DIR=/home/HCPpipeline/pipeline_tools/workbench-v1.0/bin_rh_linux64
+	export CARET7DIR=/home/HCPpipeline/pipeline_tools/workbench-v1.1.1/bin_rh_linux64
 	echo "${script_name}: Set up to use Workbench at ${CARET7DIR}"
 
 	echo ""
