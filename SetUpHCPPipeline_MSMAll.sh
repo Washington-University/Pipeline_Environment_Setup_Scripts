@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-script_name="SetUpHCPPipeline_MSM_All.sh"
+script_name="SetUpHCPPipeline_MSMAll.sh"
 echo "${script_name}: This script must be SOURCED to correctly setup the environment prior to running"
 echo "${script_name}: any of the other HCP scripts contained here."
 
