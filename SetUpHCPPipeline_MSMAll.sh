@@ -41,7 +41,7 @@ then
 
 	echo ""
 	echo "${script_name}: Setting up HCP Pipelines"
-	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_MSM_All
+	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_dev
 
 	# global
 	export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
@@ -69,7 +69,6 @@ then
 	echo "${script_name}: Set up to use HCP Pipelines at ${HCPPIPEDIR}"
 
 	# MSM
-	#export MSMBin=/NRG/BlueArc/nrgpackages/tools.release/MSMSulc-v1.3-2014.02.10
 	export MSMBin=/home/HCPpipeline/pipeline_tools/MSM-2015.01.14
 	echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
 
