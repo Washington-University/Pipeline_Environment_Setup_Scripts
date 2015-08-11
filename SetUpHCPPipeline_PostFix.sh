@@ -41,7 +41,7 @@ then
 
 	echo ""
 	echo "${script_name}: Setting up HCP Pipelines"
-	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_dev
+	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_PostFix
 
 	# global
 	export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
