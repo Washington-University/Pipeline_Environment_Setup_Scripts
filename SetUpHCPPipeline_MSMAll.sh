@@ -69,7 +69,7 @@ then
 	echo "${script_name}: Set up to use HCP Pipelines at ${HCPPIPEDIR}"
 
 	# MSM
-	export MSMBin=/home/HCPpipeline/pipeline_tools/MSM-2015.01.14
+	export MSMBin=/home/HCPpipeline/pipeline_tools/MSM-2015.01.14-RHEL5
 	echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
 
 	# Octave
