@@ -41,7 +41,7 @@ then
 
 	echo ""
 	echo "${script_name}: Setting up HCP Pipelines"
-	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_GenerateSpinEchoBiasFields
+	export HCPPIPEDIR=/home/HCPpipeline/pipeline_tools/Pipelines_GenerateSpinEchoBiasFieldPrereqs
 
 	# global
 	export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
