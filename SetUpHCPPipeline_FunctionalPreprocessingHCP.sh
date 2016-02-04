@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-script_name="SetUpHCPpipeline_StructuralPreprocHCP.sh"
+script_name="SetUpHCPpipeline_FunctionalPreprocessingHCP.sh"
 echo "${script_name}: This script must be SOURCED to correctly setup the environment prior to running"
 echo "${script_name}: any of the other HCP scripts contained here."
 

@@ -7,7 +7,7 @@ if [[ "${CLUSTER}" == "1.0" ]]; then
     #LD_LIBRARY_PATH=${FSLDIR}/lib::${LD_LIBRARY_PATH}
     export FSLDIR PATH LD_LIBRARY_PATH
 
-elif
+else
     echo "fsl504_setup.sh: -- ERROR -- Unable to use CLUSTER: '${CLUSTER}' value to determine location of FSL"
 
 fi
