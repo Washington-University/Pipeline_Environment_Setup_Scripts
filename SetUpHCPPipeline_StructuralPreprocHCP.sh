@@ -104,7 +104,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		
 		echo ""
 		echo "${script_name}: Setting up HCP Pipelines"
-		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines_dev
+		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.14.1
 
 		# global
 		export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config

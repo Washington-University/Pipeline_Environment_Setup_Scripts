@@ -1,14 +1,13 @@
 #!/bin/bash
 
-
 if [[ "${CLUSTER}" == "1.0" ]]; then
-    echo "Setting up Python for CLUSTER: ${CLUSTER}"
+    echo "epd-python_setup.sh: Setting up Python for CLUSTER: ${CLUSTER}"
     EPD_PYTHON_HOME=/export/epd-7.3.2
     PATH=${EPD_PYTHON_HOME}/bin:${PATH}
     export PATH
 
 elif [[ "${CLUSTER}" == "2.0" ]] ; then
-    echo "Setting up Python for CLUSTER: ${CLUSTER}"
+    echo "epd-python_setup.sh: Setting up Python for CLUSTER: ${CLUSTER}"
     EPD_PYTHON_HOME=${HOME}/export/epd-7.3.2
     export PATH=${EPD_PYTHON_HOME}/bin:${PATH}
 

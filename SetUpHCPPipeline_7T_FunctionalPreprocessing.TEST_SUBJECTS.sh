@@ -12,10 +12,8 @@ if [ "$COMPUTE" = "CHPC" ] ; then
     echo "SetUpHCPPipeline_7T: Setting up for processing on ${COMPUTE}"
 
 	if [ "${CLUSTER}" = "2.0" ] ; then
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up for CHPC cluster ${CLUSTER}"
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up FSL"
 		export FSLDIR=${HOME}/export/fsl-5.0.9-custom-eddy
 		source ${FSLDIR}/etc/fslconf/fsl.sh
@@ -30,30 +28,26 @@ if [ "$COMPUTE" = "CHPC" ] ; then
 			export LD_LIBRARY_PATH=/act/gcc-4.7.2/lib64:${LD_LIBRARY_PATH}
 		fi
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Added /act/gcc-4.7.2/lib64 to LD_LIBRARY_PATH"
 		echo "SetUpHCPPipeline_7T: LD_LIBRARY_PATH: ${LD_LIBRARY_PATH}"
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up FreeSurfer"
 		export FSL_DIR="${FSLDIR}"
 		export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 		source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 		echo "SetUpHCPPipeline_7T: Set up to use FreeSurfer at ${FREESURFER_HOME}"
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up Python"
 		export EPD_PYTHON_HOME=${HOME}/export/epd-7.3.2
 		export PATH=${EPD_PYTHON_HOME}/bin:${PATH}
 		echo "SetUpHCPPipeline_7T: Set up to use EPD Python at ${EPD_PYTHON_HOME}"
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up Workbench (a.k.a. CARET7)"
 		export CARET7DIR=${HOME}/pipeline_tools/workbench-v1.0/bin_rh_linux64
 		echo "SetUpHCPPipeline_7T: Set up to use Workbench at ${CARET7DIR}"
 
-		echo "SetUpHCPPipeline_7T: "
 		echo "SetUpHCPPipeline_7T: Setting up HCP Pipelines"
+		#export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.15.0
 		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines_dev
 
 		# global

@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-script_name="SetUpHCPpipeline_IcaFixHCP.sh"
+script_name="SetUpHCPpipeline_StructuralPreprocHCP.Pipelines_dev.sh"
 echo "${script_name}: This script must be SOURCED to correctly setup the environment prior to running"
 echo "${script_name}: any of the other HCP scripts contained here."
 
@@ -134,7 +134,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		# MSM
 		export MSMBin=${NRG_PACKAGES}/tools.release/MSMSulc-v1.3-2014.02.10
 		echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
-
+		
     else # unhandled value for ${CLUSTER}
 		echo "${script_name}: Processing set up for cluster ${CLUSTER} is currently not supported."
 		echo "${script_name}: EXITING WITH NON-ZERO EXIT STATUS (UNSUCCESSFUL EXECUTION)"
