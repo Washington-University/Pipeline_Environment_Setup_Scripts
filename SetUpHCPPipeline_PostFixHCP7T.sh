@@ -47,7 +47,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "SetUpHCPPipeline_PostFixHCP7T.sh: Set up to use Workbench at ${CARET7DIR}"
 		
 		echo "SetUpHCPPipeline_PostFixHCP7T.sh: Setting up HCP Pipelines"
-		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.16.0
+		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.16.1
 
 		# global
 		export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
