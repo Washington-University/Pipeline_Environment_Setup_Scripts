@@ -48,7 +48,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "${setup_script_name}: Set up to use Workbench at ${CARET7DIR}"
 
 		echo "${setup_script_name}: Setting up HCP Pipelines"
-		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.18.0
+		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.19.0
 
 		# global
 		export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
