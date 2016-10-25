@@ -89,6 +89,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 else # unhandled value for ${COMPUTE}
 	echo "${setup_script_name}: Processing set up for COMPUTE environment ${COMPUTE} is currently not supported."
 	echo "${setup_script_name}: EXITING WITH NON-ZERO EXIT STATUS (UNSUCCESSFUL EXECUTION)"
+	exit 1
 
 fi
 

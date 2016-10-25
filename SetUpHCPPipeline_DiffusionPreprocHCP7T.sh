@@ -16,7 +16,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
  		echo "${setup_script_name}: Setting up for CHPC cluster ${CLUSTER}"
 
 		echo "${setup_script_name}: Setting up FSL"
-		export FSLDIR=${HOME}/export/fsl-5.0.9-custom-eddy-20160805
+		export FSLDIR=${HOME}/export/fsl-5.0.9-custom-eddy-20161006
 		source ${FSLDIR}/etc/fslconf/fsl.sh
 		echo "${setup_script_name}: Set up to use FSL at ${FSLDIR}"
 
@@ -48,7 +48,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "${setup_script_name}: Set up to use Workbench at ${CARET7DIR}"
 
 		echo "${setup_script_name}: Setting up HCP Pipelines"
-		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines_dev
+		export HCPPIPEDIR=${HOME}/pipeline_tools/Pipelines-3.20.0-alpha.1
 
 		# global
 		export HCPPIPEDIR_Config=${HCPPIPEDIR}/global/config
