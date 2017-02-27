@@ -66,8 +66,8 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 		export MSMBin=/home/HCPpipeline/pipeline_tools/MSM-2015.01.14
 		echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
 
-		export OCTAVE_HOME=/export/octave-3.6.3
-		echo "${script_name}: Set up to use Octave at ${OCTAVE_HOME}"
+		#export OCTAVE_HOME=/export/octave-3.6.3
+		#echo "${script_name}: Set up to use Octave at ${OCTAVE_HOME}"
 
 	elif [ "${CLUSTER}" = "2.0" ] ; then
 		echo ""
@@ -82,7 +82,7 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 		echo ""
 		echo "${script_name}: Setting up FreeSurfer"
 		export FSL_DIR="${FSLDIR}"
-		export FREESURFER_HOME=/act/freesurfer-5.3-HCP
+		export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 		source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 		echo "${script_name}: Set up to use FreeSurfer at ${FREESURFER_HOME}"
 
@@ -123,8 +123,8 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 		export MSMBin=${HOME}/pipeline_tools/MSM-2015.01.14
 		echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
 
-		export OCTAVE_HOME=/export/octave-3.6.3
-		echo "${script_name}: Set up to use Octave at ${OCTAVE_HOME}"
+		#export OCTAVE_HOME=/export/octave-3.6.3
+		#echo "${script_name}: Set up to use Octave at ${OCTAVE_HOME}"
 
 	else # unhandled value for ${CLUSTER}
 		echo "${script_name}: Processing set up for cluster ${CLUSTER} is currently not supported."
