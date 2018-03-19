@@ -15,7 +15,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Setting up for CHPC cluster ${CLUSTER}"
 		
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Setting up FSL"
-		export FSLDIR=${HOME}/export/fsl-5.0.9-custom-eddy
+		export FSLDIR=/export/HCP/fsl-5.0.9-custom-eddy
 		source ${FSLDIR}/etc/fslconf/fsl.sh
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Set up to use FSL at ${FSLDIR}"
 		
@@ -38,12 +38,12 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Set up to use FreeSurfer at ${FREESURFER_HOME}"
 		
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Setting up Python"
-		export EPD_PYTHON_HOME=${HOME}/export/epd-7.3.2
+		export EPD_PYTHON_HOME=/export/HCP/epd-7.3.2
 		export PATH=${EPD_PYTHON_HOME}/bin:${PATH}
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Set up to use EPD Python at ${EPD_PYTHON_HOME}"
 		
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Setting up Workbench (a.k.a. CARET7)"
-		export CARET7DIR=${HOME}/pipeline_tools/workbench-v1.1.1/bin_rh_linux64
+		export CARET7DIR=/export/HCP/workbench-v1.1.1/bin_rh_linux64
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Set up to use Workbench at ${CARET7DIR}"
 		
 		echo "SetUpHCPPipeline_IcaFixProcessingHCP7T.sh: Setting up HCP Pipelines"

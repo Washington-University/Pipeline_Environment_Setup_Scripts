@@ -9,7 +9,7 @@ if [[ "${CLUSTER}" == "1.0" ]]; then
 
 elif [[ "${CLUSTER}" == "2.0" ]]; then
 
-	export FSLDIR=${HOME}/export/fsl-5.0.6-20150401
+	export FSLDIR=/export/HCP/fsl-5.0.6-20150401
 	source ${FSLDIR}/etc/fslconf/fsl.sh
 	export PATH=${FSLDIR}/bin:${PATH}
 	export LD_LIBRARY_PATH=${FSLDIR}/lib:${LD_LIBRARY_PATH}

@@ -37,7 +37,7 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 		
 		echo ""
 		echo "${script_name}: Setting up Workbench (a.k.a. CARET7)"
-		export CARET7DIR=/home/HCPpipeline/pipeline_tools/workbench-v1.1.1/bin_rh_linux64
+		export CARET7DIR=/export/HCP/workbench-v1.1.1/bin_rh_linux64
 		echo "${script_name}: Set up to use Workbench at ${CARET7DIR}"
 		
 		echo ""
@@ -75,7 +75,7 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 
 		echo ""
 		echo "${script_name}: Setting up FSL"
-		export FSLDIR=${HOME}/export/fsl-5.0.6-20150401
+		export FSLDIR=/export/HCP/fsl-5.0.6-20150401
 		source ${FSLDIR}/etc/fslconf/fsl.sh
 		echo "${script_name}: Set up to use FSL at ${FSLDIR}"
 		
@@ -94,7 +94,7 @@ if [ "${COMPUTE}" = "CHPC" ]; then
 
 		echo ""
 		echo "${script_name}: Setting up Workbench (a.k.a. CARET7)"
-		export CARET7DIR=${HOME}/pipeline_tools/workbench-v1.1.1/bin_rh_linux64
+		export CARET7DIR=/export/HCP/workbench-v1.1.1/bin_rh_linux64
 		echo "${script_name}: Set up to use Workbench at ${CARET7DIR}"
 		
 		echo ""

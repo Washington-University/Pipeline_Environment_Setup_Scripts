@@ -1,37 +1,26 @@
 #!/bin/bash
 
-if [[ "${CLUSTER}" == "1.0" ]]; then
-    PACKAGES_DIR=/export/freesurfer-5.3-HCP
+local_log()
+{
+	local msg="$*"
+	local date_time
+	date_time=$(date)
+	local tool_name="freesurfer53_setup.sh"
+	echo "${date_time} - ${tool_name} - ${msg}"
+}
 
-    if [ -z "$FSLDIR" ]; then
-		source /home/HCPpipeline/SCRIPTS/fsl5_setup.sh
-    fi
-    source ${PACKAGES_DIR}/SetUpFreeSurfer.sh
-    QA_SCRIPTS=$FREESURFER_HOME/QAtools
-    RECON_CHECKER_SCRIPTS=$QA_SCRIPTS/data_checker
-    PATH=$RECON_CHECKER_SCRIPTS:$QA_SCRIPTS:$PATH
-    export PATH
-
-elif [[ "${CLUSTER}" == "2.0" ]]; then
-
+if [[ "${CLUSTER}" == "2.0" ]]; then
+	local_log "Setting up FreeSurfer 5.3.0-HCP for CLUSTER: ${CLUSTER}"
+	
 	export FSL_DIR="${FSLDIR}"
 	export FREESURFER_HOME=/act/freesurfer-5.3.0-HCP
 	source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
-
-#    PACKAGES_DIR=/act/freesurfer-5.3.0-HCP
-#
-#    if [ -z "$FSLDIR" ]; then
-#		source /home/HCPpipeline/SCRIPTS/fsl5_setup.sh
-#    fi
-#    source ${PACKAGES_DIR}/SetUpFreeSurfer.sh
-#    QA_SCRIPTS=$FREESURFER_HOME/QAtools
-#    RECON_CHECKER_SCRIPTS=$QA_SCRIPTS/data_checker
-#    PATH=$RECON_CHECKER_SCRIPTS:$QA_SCRIPTS:$PATH
-#    export PATH
-    
 else
-    echo "freesurfer53_setup.sh: -- ERROR -- Unable to CLUSTER: '${CLUSTER}' value to determine location of FreeSurfer 5.3 HCP"
+    local_log "Unable to use CLUSTER: '${CLUSTER}' value to determine location of FreeSurfer 5.3.0-HCP"
+	local_log "EXITING WITH NON-ZERO EXIT STATUS (UNSUCCESSFUL EXECUTION)"
+	exit 1
 	
 fi
 
+unset -f local_log
