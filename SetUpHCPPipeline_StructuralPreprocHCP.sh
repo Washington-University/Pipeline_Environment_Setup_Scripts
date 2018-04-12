@@ -38,7 +38,7 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		
 		echo ""
 		echo "${script_name}: Setting up Workbench (a.k.a. CARET7)"
-		export CARET7DIR=/export/HCP/workbench-v1.0/bin_rh_linux64
+		export CARET7DIR=/export/HCP/workbench-v1.1.1/bin_rh_linux64
 		echo "${script_name}: Set up to use Workbench at ${CARET7DIR}"
 		
 		echo ""
@@ -71,8 +71,13 @@ if [ "${COMPUTE}" = "CHPC" ] ; then
 		echo "${script_name}: Set up to use HCP Pipeline Scripts at ${HCPPIPEDIR}"
 
 		# MSM
-		export MSMBin=${NRG_PACKAGES}/tools.release/MSMSulc-v1.3-2014.02.10
-		echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
+		#export MSMBin=${NRG_PACKAGES}/tools.release/MSMSulc-v1.3-2014.02.10
+		#echo "${script_name}: Set up to use MSM binary at ${MSMBin}"
+		export MSMBINDIR=${NRG_PACKAGES}/tools.release/MSMSulc-v1.3-2014.02.10
+		echo "${script_name}: Set up to use MSM binary at ${MSMBINDIR}"
+		
+		export MSMCONFIGDIR=${HCPPIPEDIR}/MSMConfig
+		echo "${script_name}: Set up to use MSMCONFIGDIR: ${MSMCONFIGDIR}"
 		
     else # unhandled value for ${CLUSTER}
 		echo "${script_name}: Processing set up for cluster ${CLUSTER} is currently not supported."
